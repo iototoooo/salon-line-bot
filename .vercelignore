@@ -1,0 +1,18 @@
+# Vercel CLI（vercel deploy）でアップロードしないファイル。
+# .env.local・node_modules・.next・.git などは Vercel の既定で除外される（docs/deployment.md 9 章）。
+# ここでは、本番に不要で、このPCの設定や接続先の情報を含むものを除外する。
+
+# 環境変数のファイル（値は Vercel の Environment Variables に登録する）
+.env*
+
+# このPCの Claude Code・Supabase CLI の設定
+.claude/
+supabase/.temp/
+supabase/.branches/
+
+# テストの結果・キャッシュ
+test-results/
+playwright-report/
+blob-report/
+coverage/
+*.tsbuildinfo
